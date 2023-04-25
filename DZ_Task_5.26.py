@@ -2,6 +2,7 @@ a, b = list(map(int, input("Введите 2 числа через пробел 
 
 def exponentiation(a, b):
     if b == 0: return 1
+    if b < 0: return  exponentiation(a, b+1) * 1/a
     return a * exponentiation(a, b-1)
 
 print(exponentiation(a, b))
